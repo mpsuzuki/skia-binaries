@@ -2,6 +2,8 @@
 
 Documents how to build Skia and its results (since December 2019, and m70).
 
+## Background.
+
 During the development for [SVG Native Viewer](https://github.com/adobe/svg-native-viewer),
 I had to build Skia for GNU/Linux, macOS and Windows.
 
