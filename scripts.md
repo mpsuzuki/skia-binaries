@@ -8,7 +8,7 @@ but too few examples for Win32 or Win64 builders.
 
 ## how to use
 
- # Download depot_tools and setup Python2 (almost same with (their document)[https://skia.org/user/build])
+Download depot_tools and setup Python2 (almost same with (their document)[https://skia.org/user/build])
 
 ```
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
@@ -19,7 +19,7 @@ ln -s python2 python
 cd ..
 ```
 
- # Download and synchronize the skia and related components.
+Download and synchronize the skia and related components.
 
 ```
 git clone https://skia.googlesource.com/skia.git
@@ -27,21 +27,21 @@ cd skia
 python tools/git-sync-deps
 ```
 
- # Invoke "gn" for an archive library and fix WSL-syntax pathnames in Ninja files
+Invoke "gn" for an archive library and fix WSL-syntax pathnames in Ninja files
 
 ```
 sh -x /somewhere/you/downloaded/scripts/build-skia-static.sh
 sh -x /somewhere/you/downloaded/scripts/RewriteWSLPath.sh out/Static
 ```
 
- # Invoke "gn" for DLL and fix WSL-syntax pathnames in Ninja files
+Invoke "gn" for DLL and fix WSL-syntax pathnames in Ninja files
 
 ```
 sh -x /somewhere/you/downloaded/scripts/build-skia-shared.sh
 sh -x /somewhere/you/downloaded/scripts/RewriteWSLPath.sh out/Shared
 ```
 
- # Execute Ninja
+Execute Ninja
 
 ```
 ninja -v -C out/Static 2>&1 | tee out/Static/LOG.build
